@@ -122,7 +122,7 @@ function createProductItem(product) {
   li.innerHTML = `
       <div class="product-image">
           <a href="product-details.html?id=${product.id}">
-            <img src="../${product.imageUrl}" alt="${product.name}" />
+            <img src="${product.imageUrl}" alt="${product.name}" />
             <span class="sale-label">Sale</span>
           </a>
         </div>
@@ -165,7 +165,7 @@ async function loadProducts() {
   );
 
   try {
-    const response = await fetch("../assets/data.json");
+    const response = await fetch("assets/data.json");
     if (!response.ok) throw new Error("Failed to load JSON");
 
     const { data } = await response.json();
@@ -223,27 +223,27 @@ function buildProductLayout(product) {
   element.className = "product-layout";
   element.innerHTML = `
     <div class="product-left-column">
-     <img class="product-main-image" src="../${product.imageUrl}" alt="${
+     <img class="product-main-image" src="${product.imageUrl}" alt="${
     product.name
   }" />
      <ul class="product-thumbnails-carousel">
         <li>
-            <img class="product-thumbnail" src="../assets/images/products/product-secondary-thumbnail-1.png" alt="${
+            <img class="product-thumbnail" src="assets/images/products/product-secondary-thumbnail-1.png" alt="${
               product.name
             }" />
         </li>
         <li>
-            <img class="product-thumbnail" src="../assets/images/products/product-secondary-thumbnail-2.png" alt="${
+            <img class="product-thumbnail" src="assets/images/products/product-secondary-thumbnail-2.png" alt="${
               product.name
             }" />
         </li>
         <li>
-            <img class="product-thumbnail" src="../assets/images/products/product-secondary-thumbnail-3.png" alt="${
+            <img class="product-thumbnail" src="assets/images/products/product-secondary-thumbnail-3.png" alt="${
               product.name
             }" />
         </li>
         <li>
-            <img class="product-thumbnail" src="../assets/images/products/product-secondary-thumbnail-4.png" alt="${
+            <img class="product-thumbnail" src="assets/images/products/product-secondary-thumbnail-4.png" alt="${
               product.name
             }" />
         </li>
@@ -310,10 +310,10 @@ function buildProductLayout(product) {
               <p>
               Payment:
               </p>
-              <img src="../assets/images/product-page/visa-pay-logo.png" alt="Visa"/>
-              <img src="../assets/images/product-page/american-express-logo.png" alt="american express"/>
-              <img src="../assets/images/product-page/master-card-logo.png" alt="master card"/>
-              <img src="../assets/images/product-page/paypal-logo.png" alt="paypal"/>
+              <img src="assets/images/product-page/visa-pay-logo.png" alt="Visa"/>
+              <img src="assets/images/product-page/american-express-logo.png" alt="american express"/>
+              <img src="assets/images/product-page/master-card-logo.png" alt="master card"/>
+              <img src="assets/images/product-page/paypal-logo.png" alt="paypal"/>
             </div>
           </div>
         
