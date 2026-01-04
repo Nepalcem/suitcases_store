@@ -4,14 +4,14 @@
 
 I'm happy to introduce you a light version of the project which was developed as part of the EPAM 2025 Frontend Learning Program.
 
-General Features of this project:
+### General Features of this project:
 
 - The task was not to use any Frameworks or libraries like React, NextJS and bundlers like Gulp, WebPack etc so the project was built entirely with vanilla JavaScript.
 - Fully responsive for tablet and mobile devices;
 - All HTML, SCSS, and JavaScript code is modular and well-structured. In the original project - the header and footer are loaded dynamically, simplifying maintenance and enabling easy addition of new pages;
 - Products data is loaded dynamically from a JSON file, emulating real database requests;
 
-JavaScript Functionality:
+### JavaScript Functionality:
 
 - The header is sticky, and the navigation collapses into a toggle menu on mobile;
 - The shopping cart icon updates the product counter in real time, synchronized with localStorage;
@@ -23,7 +23,7 @@ JavaScript Functionality:
 - Implemented custom product list pagination functionality to support large inventories;
 
 
-CSS / SCSS Features:
+### CSS / SCSS Features:
 
 - Built with SASS, using global variables, mixins, placeholders, and other reusable components for easy scalability;
 - Custom UI elements: quantity inputs, password fields, checkboxes, and rating selectors.;
