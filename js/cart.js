@@ -102,7 +102,7 @@ class CartManager {
       row.classList.add("cart-row");
 
       row.innerHTML = `
-    <div><img src="../${item.product.imageUrl}" alt="${
+    <div><img src="${item.product.imageUrl}" alt="${
         item.product.name
       }" class="cart-image" /></div>
     <div class="cart-product-name"><a href="product-details.html?id=${
@@ -119,7 +119,7 @@ class CartManager {
   </div>
 
     <div class="cart-product-price">$${total.toFixed(2)}</div>
-    <div><button class="cart-delete"><img src="../assets/images/cart/delete-icon.png" /></button></div>
+    <div><button class="cart-delete"><img src="assets/images/cart/delete-icon.png" /></button></div>
   `;
 
       row.querySelector(".quantity").addEventListener("click", (e) => {
