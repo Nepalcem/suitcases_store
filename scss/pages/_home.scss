@@ -1,0 +1,371 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  background-color: $hero-background-color;
+  padding: 116px 0 120px 0;
+
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $tablet-max-width) and (min-width: $tablet-breakpoint) {
+      img {
+        max-width: 500px;
+      }
+    }
+    @media screen and (max-width: $tablet-vertical-max-width) and (min-width: $mobile-breakpoint) {
+      img {
+        max-width: 300px;
+      }
+    }
+    @media screen and (max-width: $mobile-max-width) {
+      img {
+        display: none;
+      }
+    }
+
+    .hero-content {
+      h1 {
+        max-width: 486px;
+        margin-bottom: 31px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      .hero-image {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.advertisement {
+  @extend %main-box-shadow;
+  position: relative;
+  top: -100px;
+  margin-bottom: 19px;
+  display: flex;
+  background-color: white;
+
+  @media screen and (max-width: $tablet-vertical-max-width) {
+    flex-direction: column;
+  }
+  .advertisement-left-block {
+    padding: 75px 0px 75px 70px;
+    flex-basis: 50%;
+    @media screen and (max-width: $mobile-max-width) {
+      padding: 25px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+    p {
+      max-width: 494px;
+      margin-bottom: 30px;
+    }
+    .advertisement-personal {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 28px;
+
+      img {
+        display: inline-block;
+      }
+
+      .advertisement-personal-title {
+        @extend %text-heading;
+        color: black;
+        font-size: 20px;
+        margin-bottom: 7px;
+      }
+      .advertisement-personal-subtitle {
+        color: black;
+        font-size: 17px;
+      }
+    }
+  }
+
+  .advertisement-right-block {
+    padding: 75px 0px 75px 64px;
+    flex-basis: 50%;
+    @include bg-overlay(
+      "../assets/images/home-page/advertisement-banner.png"
+    );
+
+    h2 {
+      margin-top: 114px;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: white;
+      max-width: 494px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.suitcases {
+  @include section-title;
+  @include section-bottom-margin();
+
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+  }
+  .slider-track {
+    display: flex;
+    gap: 39px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.4s ease;
+  }
+
+  .suitcase {
+    position: relative;
+    width: 296px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: $mobile-max-width) {
+      width: 150px;
+      height: 300px;
+      padding-bottom: 7px;
+      padding-left: 7px;
+      padding-right: 7px;
+      justify-content: center;
+    }
+
+    &.case_1 {
+      background: url("../assets/images/home-page/suitecase_1.png");
+      @media screen and (max-width: $mobile-max-width) {
+        background-size: contain;
+      }
+    }
+
+    &.case_2 {
+      background: url("../assets/images/home-page/suitecase_2.png");
+      @media screen and (max-width: $mobile-max-width) {
+        background-size: contain;
+      }
+    }
+    &.case_3 {
+      background: url("../assets/images/home-page/suitecase_3.png");
+      @media screen and (max-width: $mobile-max-width) {
+        background-size: contain;
+      }
+    }
+    &.case_4 {
+      background: url("../assets/images/home-page/suitecase_4.png");
+      @media screen and (max-width: $mobile-max-width) {
+        background-size: contain;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    // Making sure content is above the overlay
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+      transition: transform 0.3s ease;
+    }
+    &:hover::before {
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .case-heading {
+      @extend %text-heading;
+      font-size: 19px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: white;
+    }
+  }
+}
+
+.selected-products {
+  @include section-title;
+  @include section-bottom-margin();
+
+  .selected-list {
+    display: flex;
+    gap: 39px;
+    @media (max-width: $tablet-max-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+}
+
+.home-banner {
+  @include section-bottom-margin();
+
+  .banner-content {
+    @include bg-overlay(
+      "../assets/images/home-page/banner-overlay.jpg"
+    );
+    @extend %main-box-shadow;
+    background-size: auto;
+    padding: 29px 105px 83px 105px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet-max-width) and (min-width: $tablet-breakpoint) {
+      background-size: cover;
+      padding: 15px 60px 50px 60px;
+      gap: 10px;
+    }
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      background-size: cover;
+      padding: 10px 10px 30px 10px;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    p {
+      color: white;
+    }
+
+    .left-banner-box {
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: $tablet-vertical-max-width) {
+        align-items: center;
+      }
+
+      p {
+        font-size: 20px;
+      }
+      .banner-price {
+        @extend %text-heading;
+        font-weight: 900;
+        font-size: 223px;
+        @media screen and (max-width: $tablet-vertical-max-width) {
+          font-size: 120px;
+        }
+        color: white;
+      }
+      .discount-span {
+        position: relative;
+        text-align: center;
+        top: -15px;
+      }
+    }
+
+    .right-banner-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 50px;
+      @media screen and (max-width: $tablet-vertical-max-width) {
+        align-items: center;
+      }
+
+      h2 {
+        @extend %text-heading;
+        font-weight: 900;
+        font-size: 40px;
+        color: white;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 17px;
+        margin-bottom: 30px;
+        max-width: 420px;
+      }
+    }
+  }
+}
+
+.new-products {
+  @include section-title;
+  @include section-bottom-margin();
+
+  .new-products-list {
+    display: flex;
+    gap: 39px;
+    @media (max-width: $tablet-max-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+}
+
+.testimonials {
+  @include section-title;
+  @include section-bottom-margin();
+
+  .testimonial-list {
+    display: flex;
+    gap: 20px;
+    @media (max-width: $tablet-vertical-max-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    li {
+      @extend %main-box-shadow;
+      padding: 50px;
+      background-color: white;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 24px;
+      }
+
+      .testimonial-text {
+        color: black;
+        max-width: 338px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .testimonial-name {
+        @extend %text-heading;
+        color: $primary-accent-color;
+        font-size: 17px;
+        text-align: center;
+      }
+    }
+  }
+}

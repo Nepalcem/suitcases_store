@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitcase e-shop - About Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="about">
+    <header>
+    <div class="container">
+        <div class="top-header-block">
+            <ul class="social-icons">
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/facebook.svg" alt="facebook icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/twitter.svg" alt="twitter icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/instagram.svg" alt="instagram icon">
+                    </a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/logo.png" alt="Best Shop Logo">
+                    <svg class="inner_bag" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="32" height="32" fill="url(#pattern0_7064_3)" />
+                        <defs>
+                            <pattern id="pattern0_7064_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_7064_3" transform="scale(0.00666667)" />
+                            </pattern>
+                            <image id="image0_7064_3" width="150" height="150" preserveAspectRatio="none"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmUExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5WfaagAAAAidFJOUwAQIECPz+//359gcK+/MFAcGFTjgKNuCERsZWQ51+5o89uQKq+OAAAACXBIWXMAABcRAAAXEQHKJvM/AAACH0lEQVR4Xu3b0VLaUACEYSFIBCtRFNFWrb7/S3ZMOtnkz9bBdnLsxf6XycH9BhjGm5ydpZRSSimllNJ/1GI5acEzhatW5+vadbGqeLZYiw01wzZf9J5VF5SMW2/5ihJdkjHtC1xL/6UatV7yVbP3jQbXFV81d1sKfKU/xpPerOJv1+KEb1Zb2V+JXb97vq0mNVf97R1fOWtVv2t/zRcf356tpt+1n5JYDW/NWlifKazPFNbvrpvtoJv22m546b1Vv3vJW+/pn54Nb3W/rzfDS801CNP2t/1fbOt+Du/GF/+lu/YP6ue47XYPBjqMj5di1fUGkFH3PF2MVd+DMug4/b+gGGt9BEY98GxBVv0AjHrk0ZKsR2CUWS/H6m64zHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwKjvPFqS9QMY9cSjJVlPwAx65tlyrGdQhu1feLoU6+XDpzF+vuJ4Idbrn79ZbcvD2+h8Edbb4YRnd0dPu3dPSJgH4P+27nGl4/RSSimllFJKKc3VLyXhNx4FpV0aAAAAAElFTkSuQmCC" />
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <ul class="user-links">
+                <li>
+                    <a href="#" id="user-account" rel="noopener noreferrer">
+                        <img src="../assets/images/user-icons/user.svg" alt="User Login">
+                    </a>
+                </li>
+                <li class="counter-container">
+                    <a href="cart.html">
+                        <img src="../assets/images/user-icons/shopping-cart.svg" alt="shopping cart">
+                    </a>
+                    <span class="cart-counter"></span>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog
+                        <img src="../assets/images/menu-arrow.svg" alt="Menu drop-down arrow"></a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="scroll-trigger"></div>
+<!-- Popup modal -->
+<div id="user-popup" class="popup-overlay">
+    <div class="popup-content">
+        <form class="login-form" id="login-form">
+            <label for="user-email" class="login-input-label">Email address <span class="required-star">*</span></label>
+            <input id="user-email" type="email" name="user-email" autocomplete="off">
+            <div class="password-wrap">
+                <label for="password" class="login-input-label">Password <span class="required-star">*</span></label>
+                <input id="password" type="password" name="password" required>
+                <span id="togglePassword" class="toggle-eye">
+                    <img src="../assets/images/header/password-hide-icon.svg" alt="password hide">
+                </span>
+            </div>
+            <div class="login-form-bottom">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="login-remember" name="login-remember">
+                    <span class="checkmark"></span>
+                    <span class="text">Remember me</span>
+                </label>
+                <p class="forgot-password"><a href="#">Forgot Your Password?</a></p>
+            </div>
+            <button class="btn btn--user-login">Log In</button>
+        </form>
+    </div>
+</div>
+    <main>
+        <section class="about-breadcrumb">
+            <h1>About us</h1>
+            <p>Duis vestibulum elit vel neque pharetra vulputate. Duis rutrum non risus in imperdiet.</p>
+        </section>
+        <section class="container">
+            <ul class="about-advantages">
+                <li class="advantages-item">
+                    <img src="../assets/images/about/advantages-icon-1.png" alt="advantage accuracy">
+                    <h3>Superior Accuracy</h3>
+                    <p>Qewist vestibulum elit vel neque pharetra vulputate scelerisque nisi urna.</p>
+                </li>
+                <li class="advantages-item">
+                    <img src="../assets/images/about/advantages-icon-2.png" alt="Awards">
+                    <h3>Awards</h3>
+                    <p>Vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
+                </li>
+                <li class="advantages-item">
+                    <img src="../assets/images/about/advantages-icon-3.png" alt="Ecological">
+                    <h3>Ecological</h3>
+                    <p>Elit vel neque duis vestibulum pharetra vulputateuisque scelerisque nisi urna.</p>
+                </li>
+                <li class="advantages-item">
+                    <img src="../assets/images/about/advantages-icon-4.png" alt="Shipping Worlwide">
+                    <h3>Shipping Worlwide</h3>
+                    <p>Quisque scelerisque nisi urna. Duis vestibulum elit vel neque pharetra vulputate.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="container">
+            <div class="new-arrivals">
+                <div class="arrivals-left">
+                    <h2>New Arrivals Every Week</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque hic earum officia quisquam explicabo cupiditate quas nostrum pariatur voluptas debitis officia quisquam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nulla saepe veritatis rerum doloremque odio atque! Minima quidem eius modi scelerisque nisi urna..</p>
+                    <button class="btn btn--discount" onclick="location.href='catalog.html'">See All Models</button>
+                </div>
+                <div class="arrivals-right">
+                    <img src="../assets/images/about/about-arrivals.png" alt="New Arrivals">
+                </div>
+            </div>
+        </section>
+        <section class="container our-team">
+            <h2>Our Incredible team</h2>
+            <ul class="ourteam-list">
+                <li class="team-item">
+                    <img src="../assets/images/about/team-1.png" alt="product manager">
+                    <h3>NATALIIA FOSTER</h3>
+                    <p>Product Manager</p>
+                </li>
+                <li class="team-item">
+                    <img src="../assets/images/about/team-2.png" alt="Graphic Designer">
+                    <h3>ALEXANDRA THOMPSON</h3>
+                    <p>Graphic Designer</p>
+                </li>
+                <li class="team-item">
+                    <img src="../assets/images/about/team-3.png" alt="Head Of Marketing">
+                    <h3>IRYNA BROOKS</h3>
+                    <p>Head Of Marketing</p>
+                </li>
+            </ul>
+        </section>
+                    <section class="container home-banner">
+                        <div class="banner-content">
+                            <div class="left-banner-box">
+                                <p class="banner-price">50%</p>
+                                <p class="discount-span">Curabitur vulputate arcu odio, ac facilisis diam.</p>
+                            </div>
+                            <div class="right-banner-box">
+                                <h2>Offer Of The Month</h2>
+                                <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in
+                                    vulputate.</p>
+                                <button class="btn btn--offer">Get Offer Today</button>
+                            </div>
+                        </div>
+                    </section>
+
+    </main>
+    <footer>
+    <section class="benefits">
+        <div class="container">
+            <h3 class="benefits-title">Our Benefits</h3>
+            <ul class="benefit-items">
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-1.png" alt="Our Benefit">
+                    <p class="benefit-text">Velit nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-2.png" alt="Our Benefit">
+                    <p class="benefit-text">Dolor eu varius. Morbi fermentum velit nisl.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-3.png" alt="Our Benefit">
+                    <p class="benefit-text">Malesuada fames ac ante ipsum primis in faucibus.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-4.png" alt="Our Benefit">
+                    <p class="benefit-text">Nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="container grid-footer-container">
+        <div class="block1">
+            <h3><a href="about.html">About Us</a></h3>
+            <ul class="footer-links-list">
+                <li>Organisation</li>
+                <li>Partners</li>
+                <li>Clients</li>
+            </ul>
+        </div>
+        <div class="block2">
+            <h3>Interesting Links</h3>
+            <ul class="footer-links-list">
+                <li>Photo Gallery</li>
+                <li>Our Team</li>
+                <li>Socials</li>
+            </ul>
+        </div>
+        <div class="block3">
+            <h3>Achievements</h3>
+            <ul class="footer-links-list">
+                <li>Winning Awards</li>
+                <li>Press</li>
+                <li>Our Amazing Clients</li>
+            </ul>
+        </div>
+        <div class="block4">
+            <h3><a href="contact.html">Contact Us</a></h3>
+            <p class="footer-contact-info">Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci.
+                Sed ipsum felis, tristique
+                egestas et, convallis ac velitn consequat nec luctus.</p>
+        </div>
+        <div class="block5">
+            <h3>Shipping Information</h3>
+            <p class="footer-contact-info">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit
+                amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit
+                porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat aliquam.</p>
+        </div>
+        <div class="block6">
+            <div class="footer-phone phone">
+                <img src="../assets/images/footer/footer-icon-1.png" alt="Phone icon">
+                <p>Phone: (+63) 236 6322</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-3.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>Mon - Fri: 10am - 6pm</p>
+                    <p>Sat - Sun: 10am - 6pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="block7">
+            <div class="footer-phone">
+                <img src="../assets/images/footer/footer-icon-2.png" alt="Email icon">
+                <p>public@news.com</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-4.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>639 Jade Valley,</p>
+                    <p>Washington Dc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p class="copyright">© Copyright 2025 Mykhailo Lykhovyd</p>
+</footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.required-star {
+  color: $primary-accent-color;
+}
+
+%form-input {
+  outline: none;
+  padding: 12px 15px;
+  border: 2px solid $primary-accent-color;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: $primary-gray-decoration-color;
+}
+
+.review-form {
+  .review-form-rating {
+    display: flex;
+    gap: 16px;
+
+    .rate-product {
+      @extend %text-heading;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: black;
+      margin-bottom: 28px;
+    }
+
+    .star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 5px;
+    }
+
+    .star-rating input {
+      display: none;
+    }
+
+    .star {
+      width: 16px;
+      height: 15px;
+      cursor: pointer;
+      transition: filter 0.2s;
+    }
+
+    /* When a radio is checked, show full stars */
+    .star-rating input:checked ~ label img,
+    .star-rating label:hover img,
+    .star-rating label:hover ~ label img {
+      content: url("../assets/images/product-page/star-full.svg"); /* replace empty with full star */
+    }
+  }
+
+  #review-textarea {
+    @extend %form-input;
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .reviewer-data {
+    display: flex;
+    gap: 21px;
+    margin-bottom: 33px;
+
+    .reviewer-name {
+      @extend %form-input;
+      flex-basis: 50%;
+    }
+    .reviewer-email {
+      @extend %form-input;
+      flex-basis: 50%;
+    }
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+    margin-bottom: 31px;
+
+    .text {
+      font-size: 13px;
+    }
+  }
+
+  /* Hide the real checkbox */
+  .checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Custom checkbox */
+  .checkmark {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $primary-gray-decoration-color;
+    transition: background 0.3s;
+  }
+
+  /* styling the custom checkbox */
+  .checkbox-label input:checked + .checkmark {
+    background: $button-hover-color;
+  }
+
+  .form-message {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+  }
+
+  .form-message.error {
+    color: #d33;
+    display: block;
+  }
+
+  .form-message.success {
+    color: #2a8a2a;
+    display: block;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  .login-input-label {
+    font-size: 14px;
+    color: black;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  #user-email,
+  #password {
+    @extend %form-input;
+    width: 340px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  .password-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .password-wrap input {
+    width: 100%;
+  }
+
+  .toggle-eye {
+    position: absolute;
+    top: 40px;
+    right: 12px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.7;
+  }
+  .toggle-eye:hover {
+    opacity: 1;
+  }
+
+  .login-form-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 7px;
+
+      .text {
+        font-size: 9px;
+      }
+    }
+
+    /* Hide the real checkbox */
+    .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Custom checkbox */
+    .checkmark {
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $primary-gray-decoration-color;
+      transition: background 0.3s;
+    }
+
+    /* styling the custom checkbox */
+    .checkbox-label input:checked + .checkmark {
+      background: $button-hover-color;
+    }
+
+    .forgot-password {
+      color: $primary-accent-color;
+      font-size: 9px;
+      font-weight: 700;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  .contact-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 39px;
+
+    label {
+      @extend %text-heading;
+      font-size: 18px;
+      color: black;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      @extend %form-input;
+    }
+  }
+
+  .error-msg {
+    color: red;
+    font-size: 14px;
+  }
+  .contact-form-group:last-of-type {
+    margin-bottom: 24px;
+  }
+  .form-message {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+  }
+
+  .form-message.error {
+    color: #d33;
+    display: block;
+  }
+
+  .form-message.success {
+    color: #2a8a2a;
+    display: block;
+  }
+}

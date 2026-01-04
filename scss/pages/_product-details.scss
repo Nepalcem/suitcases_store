@@ -1,0 +1,328 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.product-page {
+  margin-top: 85px;
+  @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-top: 40px;
+    }
+
+  .product-layout {
+    display: flex;
+    gap: 43px;
+    margin-bottom: 78px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      flex-direction: column;
+    }
+  }
+}
+
+.product-left-column {
+  display: flex;
+  flex-direction: column;
+
+  .product-main-image {
+    width: 645px;
+    display: block;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $tablet-max-width) and (min-width: $tablet-breakpoint) {
+      max-width: 460px;
+    }
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      max-width: 300px;
+    }
+  }
+
+  .product-thumbnails-carousel {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      justify-content: flex-start;
+      gap: 3px;
+    }
+
+    .product-thumbnail {
+      max-width: 150px;
+      max-height: 148px;
+
+      @media screen and (max-width: $tablet-max-width) and (min-width: $tablet-breakpoint) {
+        max-width: 100px;
+      }
+      @media screen and (max-width: $tablet-vertical-max-width) {
+        max-width: 75px;
+      }
+    }
+  }
+}
+
+.product-right-column {
+  display: flex;
+  flex-direction: column;
+
+  .product-title {
+    font-size: 30px;
+    margin-bottom: 17px;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 15px;
+
+    .product-stars {
+      display: flex;
+      gap: 5px;
+    }
+
+    .reviews-amount {
+      font-size: 13px;
+    }
+  }
+
+  .product-price {
+    @extend %text-heading;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 40px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .product-description {
+    margin-bottom: 69px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 27px;
+    }
+  }
+  .product-description p:first-child {
+    margin-bottom: 39px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .product-size {
+    @extend %select-with-label;
+  }
+
+  .product-color {
+    @extend %select-with-label;
+  }
+  .product-category {
+    @extend %select-with-label;
+    margin-bottom: 80px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .addtocart-block {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 59px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-bottom: 20px;
+    }
+
+    .quantity {
+      border: 2px solid $primary-accent-color;
+      padding: 13px 22px;
+      max-width: 130px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        padding: 0;
+        width: 48px;
+        border: none;
+        display: inline-block;
+        @extend %text-heading;
+        font-size: 25px;
+        color: $quantity-buttons-color;
+        text-align: center;
+        outline: none;
+      }
+      input[type="number"] {
+        appearance: none;
+        -moz-appearance: textfield;
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  .payment-options {
+    display: flex;
+    max-width: 424px;
+    align-items: center;
+    gap: 30px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      gap: 5px;
+    }
+
+    p {
+      @extend %text-heading;
+      font-size: 23px;
+      color: $primary-gray-decoration-color;
+    }
+
+    img {
+      display: inline-block;
+      height: auto;
+    }
+  }
+}
+
+.product-tabs {
+  margin-bottom: 100px;
+  @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-bottom: 40px;
+    }
+}
+/* Tab buttons */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 30px;
+  @media screen and (max-width: $tablet-vertical-max-width) {
+    justify-content: space-between;
+    gap: unset;
+  }
+
+  .tab-button {
+    padding-bottom: 9px;
+    padding-inline-end: 0px;
+    padding-inline-start: 0px;
+    @extend %text-heading;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-bottom-color: $primary-accent-color;
+    }
+  }
+  .tab-button.active {
+    border-color: $primary-accent-color;
+  }
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  padding: 20px 0;
+
+  p:not(#tab2 p) {
+    margin-bottom: 35px;
+  }
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.reviews-main {
+  display: flex;
+  gap: 88px;
+  @media screen and (max-width: $tablet-vertical-max-width) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .reviews-left,
+  .reviews-right {
+    flex-basis: 50%;
+  }
+
+  .reviews-list-title {
+    @extend %text-heading;
+    font-size: 17px;
+    color: black;
+    margin-bottom: 92px;
+    @media screen and (max-width: $tablet-vertical-max-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .review-item {
+    display: flex;
+    gap: 25px;
+    img {
+      display: inline-block;
+      height: auto;
+      max-height: 46px;
+    }
+
+    .review-heading {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 29px;
+
+      .reviewer-name {
+        @extend %text-heading;
+        font-size: 17px;
+
+        .review-date {
+          font-size: 13px;
+          font-weight: 400;
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+
+  .reviews-right {
+    .reviews-block-right-title {
+      @extend %text-heading;
+      font-size: 17px;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .review-warning {
+      font-size: 13px;
+      margin-bottom: 29px;
+    }
+  }
+}
+.recommended-random-products {
+  text-align: center;
+  .recommended-products-title {
+    @extend %text-heading;
+    color: black;
+    font-size: 30px;
+    display: inline-block;
+    padding-bottom: 10px;
+    @extend %main-accent-bottom-border;
+    margin-bottom: 60px;
+  }
+
+  .recommended-products {
+    display: flex;
+    margin-bottom: 123px;
+    gap: 39px;
+    @media (max-width: 1439px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+  }
+}

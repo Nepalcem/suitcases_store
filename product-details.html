@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitcase e-shop - Product Details page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+    <div class="container">
+        <div class="top-header-block">
+            <ul class="social-icons">
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/facebook.svg" alt="facebook icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/twitter.svg" alt="twitter icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/instagram.svg" alt="instagram icon">
+                    </a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/logo.png" alt="Best Shop Logo">
+                    <svg class="inner_bag" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="32" height="32" fill="url(#pattern0_7064_3)" />
+                        <defs>
+                            <pattern id="pattern0_7064_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_7064_3" transform="scale(0.00666667)" />
+                            </pattern>
+                            <image id="image0_7064_3" width="150" height="150" preserveAspectRatio="none"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmUExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5WfaagAAAAidFJOUwAQIECPz+//359gcK+/MFAcGFTjgKNuCERsZWQ51+5o89uQKq+OAAAACXBIWXMAABcRAAAXEQHKJvM/AAACH0lEQVR4Xu3b0VLaUACEYSFIBCtRFNFWrb7/S3ZMOtnkz9bBdnLsxf6XycH9BhjGm5ydpZRSSimllNJ/1GI5acEzhatW5+vadbGqeLZYiw01wzZf9J5VF5SMW2/5ihJdkjHtC1xL/6UatV7yVbP3jQbXFV81d1sKfKU/xpPerOJv1+KEb1Zb2V+JXb97vq0mNVf97R1fOWtVv2t/zRcf356tpt+1n5JYDW/NWlifKazPFNbvrpvtoJv22m546b1Vv3vJW+/pn54Nb3W/rzfDS801CNP2t/1fbOt+Du/GF/+lu/YP6ue47XYPBjqMj5di1fUGkFH3PF2MVd+DMug4/b+gGGt9BEY98GxBVv0AjHrk0ZKsR2CUWS/H6m64zHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwKjvPFqS9QMY9cSjJVlPwAx65tlyrGdQhu1feLoU6+XDpzF+vuJ4Idbrn79ZbcvD2+h8Edbb4YRnd0dPu3dPSJgH4P+27nGl4/RSSimllFJKKc3VLyXhNx4FpV0aAAAAAElFTkSuQmCC" />
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <ul class="user-links">
+                <li>
+                    <a href="#" id="user-account" rel="noopener noreferrer">
+                        <img src="../assets/images/user-icons/user.svg" alt="User Login">
+                    </a>
+                </li>
+                <li class="counter-container">
+                    <a href="cart.html">
+                        <img src="../assets/images/user-icons/shopping-cart.svg" alt="shopping cart">
+                    </a>
+                    <span class="cart-counter"></span>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog
+                        <img src="../assets/images/menu-arrow.svg" alt="Menu drop-down arrow"></a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="scroll-trigger"></div>
+<!-- Popup modal -->
+<div id="user-popup" class="popup-overlay">
+    <div class="popup-content">
+        <form class="login-form" id="login-form">
+            <label for="user-email" class="login-input-label">Email address <span class="required-star">*</span></label>
+            <input id="user-email" type="email" name="user-email" autocomplete="off">
+            <div class="password-wrap">
+                <label for="password" class="login-input-label">Password <span class="required-star">*</span></label>
+                <input id="password" type="password" name="password" required>
+                <span id="togglePassword" class="toggle-eye">
+                    <img src="../assets/images/header/password-hide-icon.svg" alt="password hide">
+                </span>
+            </div>
+            <div class="login-form-bottom">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="login-remember" name="login-remember">
+                    <span class="checkmark"></span>
+                    <span class="text">Remember me</span>
+                </label>
+                <p class="forgot-password"><a href="#">Forgot Your Password?</a></p>
+            </div>
+            <button class="btn btn--user-login">Log In</button>
+        </form>
+    </div>
+</div>
+    <main class="product-page container">
+        <section class="product-placeholder"></section>
+        <section class="product-tabs">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="tab1">DETAILS</button>
+                <button class="tab-button" data-tab="tab2">REVIEWS</button>
+                <button class="tab-button" data-tab="tab3">SHIPPING POLICY</button>
+            </div>
+            <div id="tab1" class="tab-content active">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic exercitationem molestiae impedit ipsam
+                    reiciendis officia at, odio dolorum. Nihil soluta itaque dolore! Id expedita veritatis, mollitia
+                    quod fugit eius cumque?
+                    Voluptatem voluptate modi mollitia, dolorem corrupti labore eos quaerat neque distinctio delectus
+                    placeat cumque recusandae temporibus quas veritatis. Sint qui consectetur quod aut modi eius beatae
+                    repellendus quos dolorem totam.
+                    Est fuga dolor rem odit consectetur officiis laborum vero odio quidem nihil rerum qui voluptates
+                    voluptatum reprehenderit aspernatur quaerat incidunt, cupiditate quis voluptatibus id sit
+                    consequuntur quo. Consequatur, debitis assumenda!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius modi harum, id assumenda hic
+                    laboriosam provident eos maiores ut aspernatur neque ipsa beatae, veritatis rerum pariatur fugit
+                    labore expedita? Eos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iusto, at facere iste dolore
+                    dignissimos consectetur sed excepturi. Qui laboriosam cum tempore. Quae ipsam sapiente fuga
+                    perspiciatis commodi labore quaerat.</p>
+            </div>
+            <div id="tab2" class="tab-content">
+                <div class="reviews-main">
+                    <div class="reviews-left">
+                        <p class="reviews-list-title">
+                            1 review for Global Explorer Max Comfort Suitcase Pro
+                        </p>
+                        <ul class="review-list">
+                            <li class="review-item">
+                                <img src="../assets/images/product-page/reviewer-picture.png" alt="User">
+                                <div class="review-group">
+                                    <div class="review-heading">
+                                        <p class="reviewer-name">
+                                            Ella Harper
+                                            <span class="review-date">
+                                                / June 11, 2025
+                                            </span>
+                                        </p>
+                                        <div class="review-rating">
+                                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.26648 0.552932C7.34952 0.386788 7.47719 0.247054 7.63518 0.149392C7.79317 0.0517301 7.97524 0 8.16098 0C8.34672 0 8.52879 0.0517301 8.68678 0.149392C8.84477 0.247054 8.97244 0.386788 9.05548 0.552932L10.7695 3.98593C10.8436 4.13421 10.9534 4.26174 11.089 4.35705C11.2247 4.45236 11.3819 4.51245 11.5465 4.53193L15.4385 4.99193C15.6302 5.01462 15.8113 5.09234 15.9598 5.21569C16.1084 5.33904 16.218 5.50276 16.2756 5.68707C16.3331 5.87138 16.336 6.06841 16.284 6.25435C16.232 6.44029 16.1273 6.60721 15.9825 6.73493L13.2045 9.18593C13.0728 9.30223 12.974 9.45119 12.9182 9.61779C12.8624 9.78439 12.8514 9.96276 12.8865 10.1349L13.6145 13.7119C13.652 13.8968 13.6365 14.0886 13.5697 14.2651C13.5029 14.4415 13.3876 14.5955 13.237 14.7092C13.0864 14.8228 12.9067 14.8916 12.7187 14.9075C12.5307 14.9234 12.342 14.8857 12.1745 14.7989L8.62148 12.9619C8.47933 12.8883 8.32158 12.8499 8.16148 12.8499C8.00139 12.8499 7.84363 12.8883 7.70148 12.9619L4.14648 14.7999C3.97895 14.8867 3.79028 14.9244 3.60227 14.9085C3.41426 14.8926 3.23458 14.8238 3.08398 14.7102C2.93339 14.5965 2.81803 14.4425 2.75123 14.2661C2.68443 14.0896 2.66892 13.8978 2.70648 13.7129L3.43448 10.1359C3.46952 9.96376 3.45858 9.78539 3.40275 9.61879C3.34692 9.45218 3.24819 9.30323 3.11648 9.18693L0.338482 6.73593C0.193686 6.60821 0.0889622 6.44129 0.0369568 6.25535C-0.0150486 6.06941 -0.0121117 5.87238 0.0454129 5.68807C0.102938 5.50376 0.21259 5.34004 0.361128 5.21669C0.509667 5.09334 0.69074 5.01562 0.882482 4.99293L4.77448 4.53293C4.9391 4.51345 5.0963 4.45336 5.23193 4.35805C5.36756 4.26274 5.47737 4.13521 5.55148 3.98693L7.26648 0.552932Z"
+                                                    fill="#F5B423" />
+                                            </svg>
+                                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.26648 0.552932C7.34952 0.386788 7.47719 0.247054 7.63518 0.149392C7.79317 0.0517301 7.97524 0 8.16098 0C8.34672 0 8.52879 0.0517301 8.68678 0.149392C8.84477 0.247054 8.97244 0.386788 9.05548 0.552932L10.7695 3.98593C10.8436 4.13421 10.9534 4.26174 11.089 4.35705C11.2247 4.45236 11.3819 4.51245 11.5465 4.53193L15.4385 4.99193C15.6302 5.01462 15.8113 5.09234 15.9598 5.21569C16.1084 5.33904 16.218 5.50276 16.2756 5.68707C16.3331 5.87138 16.336 6.06841 16.284 6.25435C16.232 6.44029 16.1273 6.60721 15.9825 6.73493L13.2045 9.18593C13.0728 9.30223 12.974 9.45119 12.9182 9.61779C12.8624 9.78439 12.8514 9.96276 12.8865 10.1349L13.6145 13.7119C13.652 13.8968 13.6365 14.0886 13.5697 14.2651C13.5029 14.4415 13.3876 14.5955 13.237 14.7092C13.0864 14.8228 12.9067 14.8916 12.7187 14.9075C12.5307 14.9234 12.342 14.8857 12.1745 14.7989L8.62148 12.9619C8.47933 12.8883 8.32158 12.8499 8.16148 12.8499C8.00139 12.8499 7.84363 12.8883 7.70148 12.9619L4.14648 14.7999C3.97895 14.8867 3.79028 14.9244 3.60227 14.9085C3.41426 14.8926 3.23458 14.8238 3.08398 14.7102C2.93339 14.5965 2.81803 14.4425 2.75123 14.2661C2.68443 14.0896 2.66892 13.8978 2.70648 13.7129L3.43448 10.1359C3.46952 9.96376 3.45858 9.78539 3.40275 9.61879C3.34692 9.45218 3.24819 9.30323 3.11648 9.18693L0.338482 6.73593C0.193686 6.60821 0.0889622 6.44129 0.0369568 6.25535C-0.0150486 6.06941 -0.0121117 5.87238 0.0454129 5.68807C0.102938 5.50376 0.21259 5.34004 0.361128 5.21669C0.509667 5.09334 0.69074 5.01562 0.882482 4.99293L4.77448 4.53293C4.9391 4.51345 5.0963 4.45336 5.23193 4.35805C5.36756 4.26274 5.47737 4.13521 5.55148 3.98693L7.26648 0.552932Z"
+                                                    fill="#F5B423" />
+                                            </svg>
+                                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.26648 0.552932C7.34952 0.386788 7.47719 0.247054 7.63518 0.149392C7.79317 0.0517301 7.97524 0 8.16098 0C8.34672 0 8.52879 0.0517301 8.68678 0.149392C8.84477 0.247054 8.97244 0.386788 9.05548 0.552932L10.7695 3.98593C10.8436 4.13421 10.9534 4.26174 11.089 4.35705C11.2247 4.45236 11.3819 4.51245 11.5465 4.53193L15.4385 4.99193C15.6302 5.01462 15.8113 5.09234 15.9598 5.21569C16.1084 5.33904 16.218 5.50276 16.2756 5.68707C16.3331 5.87138 16.336 6.06841 16.284 6.25435C16.232 6.44029 16.1273 6.60721 15.9825 6.73493L13.2045 9.18593C13.0728 9.30223 12.974 9.45119 12.9182 9.61779C12.8624 9.78439 12.8514 9.96276 12.8865 10.1349L13.6145 13.7119C13.652 13.8968 13.6365 14.0886 13.5697 14.2651C13.5029 14.4415 13.3876 14.5955 13.237 14.7092C13.0864 14.8228 12.9067 14.8916 12.7187 14.9075C12.5307 14.9234 12.342 14.8857 12.1745 14.7989L8.62148 12.9619C8.47933 12.8883 8.32158 12.8499 8.16148 12.8499C8.00139 12.8499 7.84363 12.8883 7.70148 12.9619L4.14648 14.7999C3.97895 14.8867 3.79028 14.9244 3.60227 14.9085C3.41426 14.8926 3.23458 14.8238 3.08398 14.7102C2.93339 14.5965 2.81803 14.4425 2.75123 14.2661C2.68443 14.0896 2.66892 13.8978 2.70648 13.7129L3.43448 10.1359C3.46952 9.96376 3.45858 9.78539 3.40275 9.61879C3.34692 9.45218 3.24819 9.30323 3.11648 9.18693L0.338482 6.73593C0.193686 6.60821 0.0889622 6.44129 0.0369568 6.25535C-0.0150486 6.06941 -0.0121117 5.87238 0.0454129 5.68807C0.102938 5.50376 0.21259 5.34004 0.361128 5.21669C0.509667 5.09334 0.69074 5.01562 0.882482 4.99293L4.77448 4.53293C4.9391 4.51345 5.0963 4.45336 5.23193 4.35805C5.36756 4.26274 5.47737 4.13521 5.55148 3.98693L7.26648 0.552932Z"
+                                                    fill="#F5B423" />
+                                            </svg>
+                                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.26648 0.552932C7.34952 0.386788 7.47719 0.247054 7.63518 0.149392C7.79317 0.0517301 7.97524 0 8.16098 0C8.34672 0 8.52879 0.0517301 8.68678 0.149392C8.84477 0.247054 8.97244 0.386788 9.05548 0.552932L10.7695 3.98593C10.8436 4.13421 10.9534 4.26174 11.089 4.35705C11.2247 4.45236 11.3819 4.51245 11.5465 4.53193L15.4385 4.99193C15.6302 5.01462 15.8113 5.09234 15.9598 5.21569C16.1084 5.33904 16.218 5.50276 16.2756 5.68707C16.3331 5.87138 16.336 6.06841 16.284 6.25435C16.232 6.44029 16.1273 6.60721 15.9825 6.73493L13.2045 9.18593C13.0728 9.30223 12.974 9.45119 12.9182 9.61779C12.8624 9.78439 12.8514 9.96276 12.8865 10.1349L13.6145 13.7119C13.652 13.8968 13.6365 14.0886 13.5697 14.2651C13.5029 14.4415 13.3876 14.5955 13.237 14.7092C13.0864 14.8228 12.9067 14.8916 12.7187 14.9075C12.5307 14.9234 12.342 14.8857 12.1745 14.7989L8.62148 12.9619C8.47933 12.8883 8.32158 12.8499 8.16148 12.8499C8.00139 12.8499 7.84363 12.8883 7.70148 12.9619L4.14648 14.7999C3.97895 14.8867 3.79028 14.9244 3.60227 14.9085C3.41426 14.8926 3.23458 14.8238 3.08398 14.7102C2.93339 14.5965 2.81803 14.4425 2.75123 14.2661C2.68443 14.0896 2.66892 13.8978 2.70648 13.7129L3.43448 10.1359C3.46952 9.96376 3.45858 9.78539 3.40275 9.61879C3.34692 9.45218 3.24819 9.30323 3.11648 9.18693L0.338482 6.73593C0.193686 6.60821 0.0889622 6.44129 0.0369568 6.25535C-0.0150486 6.06941 -0.0121117 5.87238 0.0454129 5.68807C0.102938 5.50376 0.21259 5.34004 0.361128 5.21669C0.509667 5.09334 0.69074 5.01562 0.882482 4.99293L4.77448 4.53293C4.9391 4.51345 5.0963 4.45336 5.23193 4.35805C5.36756 4.26274 5.47737 4.13521 5.55148 3.98693L7.26648 0.552932Z"
+                                                    fill="#F5B423" />
+                                            </svg>
+                                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.26648 0.552932C7.34952 0.386788 7.47719 0.247054 7.63518 0.149392C7.79317 0.0517301 7.97524 0 8.16098 0C8.34672 0 8.52879 0.0517301 8.68678 0.149392C8.84477 0.247054 8.97244 0.386788 9.05548 0.552932L10.7695 3.98593C10.8436 4.13421 10.9534 4.26174 11.089 4.35705C11.2247 4.45236 11.3819 4.51245 11.5465 4.53193L15.4385 4.99193C15.6302 5.01462 15.8113 5.09234 15.9598 5.21569C16.1084 5.33904 16.218 5.50276 16.2756 5.68707C16.3331 5.87138 16.336 6.06841 16.284 6.25435C16.232 6.44029 16.1273 6.60721 15.9825 6.73493L13.2045 9.18593C13.0728 9.30223 12.974 9.45119 12.9182 9.61779C12.8624 9.78439 12.8514 9.96276 12.8865 10.1349L13.6145 13.7119C13.652 13.8968 13.6365 14.0886 13.5697 14.2651C13.5029 14.4415 13.3876 14.5955 13.237 14.7092C13.0864 14.8228 12.9067 14.8916 12.7187 14.9075C12.5307 14.9234 12.342 14.8857 12.1745 14.7989L8.62148 12.9619C8.47933 12.8883 8.32158 12.8499 8.16148 12.8499C8.00139 12.8499 7.84363 12.8883 7.70148 12.9619L4.14648 14.7999C3.97895 14.8867 3.79028 14.9244 3.60227 14.9085C3.41426 14.8926 3.23458 14.8238 3.08398 14.7102C2.93339 14.5965 2.81803 14.4425 2.75123 14.2661C2.68443 14.0896 2.66892 13.8978 2.70648 13.7129L3.43448 10.1359C3.46952 9.96376 3.45858 9.78539 3.40275 9.61879C3.34692 9.45218 3.24819 9.30323 3.11648 9.18693L0.338482 6.73593C0.193686 6.60821 0.0889622 6.44129 0.0369568 6.25535C-0.0150486 6.06941 -0.0121117 5.87238 0.0454129 5.68807C0.102938 5.50376 0.21259 5.34004 0.361128 5.21669C0.509667 5.09334 0.69074 5.01562 0.882482 4.99293L4.77448 4.53293C4.9391 4.51345 5.0963 4.45336 5.23193 4.35805C5.36756 4.26274 5.47737 4.13521 5.55148 3.98693L7.26648 0.552932Z"
+                                                    fill="#E9E9ED" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+
+                                    </div>
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minus provident
+                                    atque mollitia ex dicta neque eius inventore beatae corrupti.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reviews-right">
+                        <p class="reviews-block-right-title">
+                            Add Review
+                        </p>
+                        <p class="review-warning">
+                            Your email address won’t be shared with anybody. Required fields have the symbol *
+                        </p>
+                        <form class="review-form" id="review-form">
+                            <div class="review-form-rating">
+                                <p class="rate-product">Rate Product</p>
+                                <div class="star-rating">
+                                    <input type="radio" name="rating" id="star5" value="5">
+                                    <label for="star5">
+                                        <img src="../assets/images/product-page/star-empty.svg" alt="5 stars"
+                                            class="star">
+                                    </label>
+
+                                    <input type="radio" name="rating" id="star4" value="4">
+                                    <label for="star4">
+                                        <img src="../assets/images/product-page/star-empty.svg" alt="4 stars"
+                                            class="star">
+                                    </label>
+
+                                    <input type="radio" name="rating" id="star3" value="3">
+                                    <label for="star3">
+                                        <img src="../assets/images/product-page/star-empty.svg" alt="3 stars"
+                                            class="star">
+                                    </label>
+
+                                    <input type="radio" name="rating" id="star2" value="2">
+                                    <label for="star2">
+                                        <img src="../assets/images/product-page/star-empty.svg" alt="2 stars"
+                                            class="star">
+                                    </label>
+
+                                    <input type="radio" name="rating" id="star1" value="1">
+                                    <label for="star1">
+                                        <img src="../assets/images/product-page/star-empty.svg" alt="1 star"
+                                            class="star">
+                                    </label>
+                                </div>
+                            </div>
+                            <textarea name="review-textarea" id="review-textarea" required rows="8"
+                                placeholder="Your Review"></textarea>
+                            <div class="reviewer-data">
+                                <input type="text" class="reviewer-name" id="name" name="name" placeholder="Your Name"
+                                    autocomplete="off" required>
+                                <input type="text" class="reviewer-email" id="email" name="email"
+                                    placeholder="Your Email" autocomplete="off" required>
+                            </div>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                <span class="text">Save my name, email, and website in this browser for when I leave
+                                    another comment.</span>
+                            </label>
+                            <p class="form-message" id="form-message"></p>
+                            <button class="btn btn--review-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tab-content">
+                <p>Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit
+                    amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim
+                    elit
+                    porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat aliquam.</p>
+                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam blanditiis labore hic dolorem
+                        alias dolores quae voluptas odio aliquam. Aspernatur nulla velit cumque quas ullam nihil
+                        distinctio enim quod accusantium.</span><span>Nobis asperiores iure, assumenda quos est,
+                        accusamus fuga possimus a quo natus dolorem, amet corporis iste deleniti. Ipsa nisi quasi,
+                        exercitationem architecto maxime aspernatur harum, error itaque ab, nobis velit.</span></p>
+            </div>
+        </section>
+        <section class="recommended-random-products">
+            <p class="recommended-products-title">You May Also Like</p>
+            <ul class="recommended-products">
+                <!-- Placeholder for "You May Also Like" Products -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+    <section class="benefits">
+        <div class="container">
+            <h3 class="benefits-title">Our Benefits</h3>
+            <ul class="benefit-items">
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-1.png" alt="Our Benefit">
+                    <p class="benefit-text">Velit nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-2.png" alt="Our Benefit">
+                    <p class="benefit-text">Dolor eu varius. Morbi fermentum velit nisl.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-3.png" alt="Our Benefit">
+                    <p class="benefit-text">Malesuada fames ac ante ipsum primis in faucibus.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-4.png" alt="Our Benefit">
+                    <p class="benefit-text">Nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="container grid-footer-container">
+        <div class="block1">
+            <h3><a href="about.html">About Us</a></h3>
+            <ul class="footer-links-list">
+                <li>Organisation</li>
+                <li>Partners</li>
+                <li>Clients</li>
+            </ul>
+        </div>
+        <div class="block2">
+            <h3>Interesting Links</h3>
+            <ul class="footer-links-list">
+                <li>Photo Gallery</li>
+                <li>Our Team</li>
+                <li>Socials</li>
+            </ul>
+        </div>
+        <div class="block3">
+            <h3>Achievements</h3>
+            <ul class="footer-links-list">
+                <li>Winning Awards</li>
+                <li>Press</li>
+                <li>Our Amazing Clients</li>
+            </ul>
+        </div>
+        <div class="block4">
+            <h3><a href="contact.html">Contact Us</a></h3>
+            <p class="footer-contact-info">Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci.
+                Sed ipsum felis, tristique
+                egestas et, convallis ac velitn consequat nec luctus.</p>
+        </div>
+        <div class="block5">
+            <h3>Shipping Information</h3>
+            <p class="footer-contact-info">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit
+                amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit
+                porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat aliquam.</p>
+        </div>
+        <div class="block6">
+            <div class="footer-phone phone">
+                <img src="../assets/images/footer/footer-icon-1.png" alt="Phone icon">
+                <p>Phone: (+63) 236 6322</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-3.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>Mon - Fri: 10am - 6pm</p>
+                    <p>Sat - Sun: 10am - 6pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="block7">
+            <div class="footer-phone">
+                <img src="../assets/images/footer/footer-icon-2.png" alt="Email icon">
+                <p>public@news.com</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-4.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>639 Jade Valley,</p>
+                    <p>Washington Dc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p class="copyright">© Copyright 2025 Mykhailo Lykhovyd</p>
+</footer>
+    <script src="../js/product.js"></script>
+</body>
+
+</html>

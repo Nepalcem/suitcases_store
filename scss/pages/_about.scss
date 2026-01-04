@@ -1,0 +1,118 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.about section {
+    margin-bottom: 130px;
+}
+
+.about-breadcrumb {
+  @include bg-overlay("../assets/images/about/about-breadcrumb.png");
+  text-align: center;
+  padding-top: 211px;
+  padding-bottom: 213px;
+
+  h1 {
+    color: white;
+    @extend %text-heading;
+    margin-bottom: 20px;
+  }
+  p {
+    color:$select-border-color;
+    font-size: 17px;
+    max-width: 426px;
+    margin: 0 auto;
+  }
+}
+
+.about-advantages {
+    display: flex;
+     justify-content: space-between;
+     @media screen and (max-width:$tablet-vertical-max-width) {
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: center;
+     }
+
+    .advantages-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;       
+
+        img {
+            width:62px;
+            height: auto;
+            margin-bottom: 22px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 23px;
+        }
+        p {
+            max-width: 260px;
+            text-align: center;
+        }
+    }
+}
+
+.new-arrivals {
+    display: flex;
+    justify-content: space-between;
+    gap: 38px;
+    @media screen and (max-width:$tablet-vertical-max-width) {
+            flex-direction: column;
+        }
+
+    .arrivals-left {
+        flex-basis: 50%;
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            line-height: 25px;
+        }
+    }
+    .arrivals-right {
+        flex-basis: 50%;
+        img {
+            @media screen and (max-width:$tablet-max-width) {
+                width:360px;
+            }
+        }
+    }
+}
+
+.our-team {
+    text-align: center;
+    h2 {
+        display: inline-block;
+        padding-bottom: 10px;
+        @extend %main-accent-bottom-border;
+        margin-bottom: 50px;
+    }
+
+    .ourteam-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (max-width:$tablet-vertical-max-width) {
+            justify-content: center;
+        }
+
+        .team-item {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                margin-bottom: 27px;
+            }
+            h3 {
+                font-size: 22px;
+                margin-bottom: 27px;
+            }
+        }
+    }
+
+
+}

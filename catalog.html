@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitcase e-shop - Catalog Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+    <div class="container">
+        <div class="top-header-block">
+            <ul class="social-icons">
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/facebook.svg" alt="facebook icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/twitter.svg" alt="twitter icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/instagram.svg" alt="instagram icon">
+                    </a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/logo.png" alt="Best Shop Logo">
+                    <svg class="inner_bag" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="32" height="32" fill="url(#pattern0_7064_3)" />
+                        <defs>
+                            <pattern id="pattern0_7064_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_7064_3" transform="scale(0.00666667)" />
+                            </pattern>
+                            <image id="image0_7064_3" width="150" height="150" preserveAspectRatio="none"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmUExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5WfaagAAAAidFJOUwAQIECPz+//359gcK+/MFAcGFTjgKNuCERsZWQ51+5o89uQKq+OAAAACXBIWXMAABcRAAAXEQHKJvM/AAACH0lEQVR4Xu3b0VLaUACEYSFIBCtRFNFWrb7/S3ZMOtnkz9bBdnLsxf6XycH9BhjGm5ydpZRSSimllNJ/1GI5acEzhatW5+vadbGqeLZYiw01wzZf9J5VF5SMW2/5ihJdkjHtC1xL/6UatV7yVbP3jQbXFV81d1sKfKU/xpPerOJv1+KEb1Zb2V+JXb97vq0mNVf97R1fOWtVv2t/zRcf356tpt+1n5JYDW/NWlifKazPFNbvrpvtoJv22m546b1Vv3vJW+/pn54Nb3W/rzfDS801CNP2t/1fbOt+Du/GF/+lu/YP6ue47XYPBjqMj5di1fUGkFH3PF2MVd+DMug4/b+gGGt9BEY98GxBVv0AjHrk0ZKsR2CUWS/H6m64zHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwKjvPFqS9QMY9cSjJVlPwAx65tlyrGdQhu1feLoU6+XDpzF+vuJ4Idbrn79ZbcvD2+h8Edbb4YRnd0dPu3dPSJgH4P+27nGl4/RSSimllFJKKc3VLyXhNx4FpV0aAAAAAElFTkSuQmCC" />
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <ul class="user-links">
+                <li>
+                    <a href="#" id="user-account" rel="noopener noreferrer">
+                        <img src="../assets/images/user-icons/user.svg" alt="User Login">
+                    </a>
+                </li>
+                <li class="counter-container">
+                    <a href="cart.html">
+                        <img src="../assets/images/user-icons/shopping-cart.svg" alt="shopping cart">
+                    </a>
+                    <span class="cart-counter"></span>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog
+                        <img src="../assets/images/menu-arrow.svg" alt="Menu drop-down arrow"></a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="scroll-trigger"></div>
+<!-- Popup modal -->
+<div id="user-popup" class="popup-overlay">
+    <div class="popup-content">
+        <form class="login-form" id="login-form">
+            <label for="user-email" class="login-input-label">Email address <span class="required-star">*</span></label>
+            <input id="user-email" type="email" name="user-email" autocomplete="off">
+            <div class="password-wrap">
+                <label for="password" class="login-input-label">Password <span class="required-star">*</span></label>
+                <input id="password" type="password" name="password" required>
+                <span id="togglePassword" class="toggle-eye">
+                    <img src="../assets/images/header/password-hide-icon.svg" alt="password hide">
+                </span>
+            </div>
+            <div class="login-form-bottom">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="login-remember" name="login-remember">
+                    <span class="checkmark"></span>
+                    <span class="text">Remember me</span>
+                </label>
+                <p class="forgot-password"><a href="#">Forgot Your Password?</a></p>
+            </div>
+            <button class="btn btn--user-login">Log In</button>
+        </form>
+    </div>
+</div>
+    <main class="catalog-page container">
+        <div class="catalog-left-column">
+            <div class="catalog-top-bar">
+                <p>Showing <span class="paginated-items">1-12</span> Of <span class="paginated-total">20</span> Results
+                </p>
+                <button id="toggle-btn" class="btn btn--show-filters">Show filters</button>
+
+                <select id="sort-select" aria-label="Sort products" class="sorting-select">
+                    <option value="default">Default Sorting</option>
+                    <option value="price-asc">Price: Low → High</option>
+                    <option value="price-desc">Price: High → Low</option>
+                    <option value="popularity-desc">Popularity</option>
+                    <option value="rating-desc">Rating</option>
+                </select>
+            </div>
+            <section id="filters" class="slide">
+                <div class="filters-container">
+                    <div class="filters-select-container">
+                        <label for="size-select">Size</label>
+                        <select id="size-select" class="sorting-select">
+                            <option value="">Choose option</option>
+                        </select>
+                    </div>
+                    <div class="filters-select-container">
+                        <label for="color-select">Color</label>
+                        <select id="color-select" class="sorting-select">
+                            <option value="">Choose option</option>
+                        </select>
+                    </div>
+                    <div class="filters-select-container">
+                        <label for="category-select">Category</label>
+                        <select id="category-select" class="sorting-select">
+                            <option value="">Choose option</option>
+                        </select>
+                    </div>
+                    <div class="filters-select-container">
+                        <label class="sales-radio" for="sales-radio">Sales</label>
+                        <input type="radio" id="sales-radio" name="sales" value="sales">
+                    </div>
+                    
+                </div>
+                <button id="clear-filters" class="btn btn--show-filters">Clear Filters</button>
+
+            </section>
+            <ul class="catalog-list">
+                <!-- Products placeholder here -->
+            </ul>
+            <div class="pagination"></div>
+        </div>
+        <div class="catalog-right-column">
+            <div class="catalog-top-bar-right">
+                <input id="model-search" type="text" placeholder="Search Models" class="search-input" />
+                <span class="search-icon">
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.325 16.7022L11.225 12.6022C9.81021 13.6688 8.04395 14.1598 6.28173 13.9764C4.51951 13.793 2.89219 12.9488 1.72734 11.6139C0.562483 10.2789 -0.0534098 8.55221 0.00363644 6.78139C0.0606827 5.01058 0.786432 3.32712 2.03479 2.06988C3.28315 0.812651 4.96143 0.0749971 6.7318 0.00541122C8.50216 -0.0641747 10.2332 0.539474 11.5764 1.69484C12.9195 2.85021 13.7752 4.47152 13.9711 6.23239C14.1669 7.99326 13.6885 9.76296 12.632 11.1852L16.732 15.2852C16.8275 15.3775 16.9037 15.4878 16.9561 15.6098C17.0085 15.7318 17.0361 15.8631 17.0372 15.9958C17.0384 16.1286 17.0131 16.2603 16.9628 16.3832C16.9125 16.5061 16.8383 16.6177 16.7444 16.7116C16.6505 16.8055 16.5388 16.8798 16.4159 16.9301C16.293 16.9804 16.1614 17.0057 16.0286 17.0045C15.8958 17.0033 15.7646 16.9758 15.6426 16.9233C15.5206 16.8709 15.4102 16.7948 15.318 16.6992L15.325 16.7022ZM2.03198 6.99525C2.03198 7.98415 2.32522 8.95085 2.87463 9.7731C3.42404 10.5953 4.20493 11.2362 5.11856 11.6146C6.03219 11.9931 7.03752 12.0921 8.00743 11.8992C8.97733 11.7062 9.86825 11.23 10.5675 10.5308C11.2668 9.83152 11.743 8.9406 11.9359 7.9707C12.1288 7.00079 12.0298 5.99546 11.6514 5.08183C11.2729 4.1682 10.6321 3.38731 9.80983 2.8379C8.98758 2.28849 8.02088 1.99525 7.03198 1.99525C5.7063 1.99657 4.4353 2.52378 3.49791 3.46118C2.56051 4.39857 2.0333 5.66957 2.03198 6.99525Z"
+                            fill="#504E4A" />
+                    </svg>
+
+                </span>
+            </div>
+            <div id="search-popup" class="popup-overlay">
+                <div class="popup-content">
+                    Product not found
+                </div>
+            </div>
+            <div class="sets">
+                <p class="sets-title">
+                    Top Best Sets
+                </p>
+                <ul class="sets-list">
+                    <!-- Render Set Lists - here -->
+
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <section class="benefits">
+        <div class="container">
+            <h3 class="benefits-title">Our Benefits</h3>
+            <ul class="benefit-items">
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-1.png" alt="Our Benefit">
+                    <p class="benefit-text">Velit nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-2.png" alt="Our Benefit">
+                    <p class="benefit-text">Dolor eu varius. Morbi fermentum velit nisl.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-3.png" alt="Our Benefit">
+                    <p class="benefit-text">Malesuada fames ac ante ipsum primis in faucibus.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-4.png" alt="Our Benefit">
+                    <p class="benefit-text">Nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="container grid-footer-container">
+        <div class="block1">
+            <h3><a href="about.html">About Us</a></h3>
+            <ul class="footer-links-list">
+                <li>Organisation</li>
+                <li>Partners</li>
+                <li>Clients</li>
+            </ul>
+        </div>
+        <div class="block2">
+            <h3>Interesting Links</h3>
+            <ul class="footer-links-list">
+                <li>Photo Gallery</li>
+                <li>Our Team</li>
+                <li>Socials</li>
+            </ul>
+        </div>
+        <div class="block3">
+            <h3>Achievements</h3>
+            <ul class="footer-links-list">
+                <li>Winning Awards</li>
+                <li>Press</li>
+                <li>Our Amazing Clients</li>
+            </ul>
+        </div>
+        <div class="block4">
+            <h3><a href="contact.html">Contact Us</a></h3>
+            <p class="footer-contact-info">Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci.
+                Sed ipsum felis, tristique
+                egestas et, convallis ac velitn consequat nec luctus.</p>
+        </div>
+        <div class="block5">
+            <h3>Shipping Information</h3>
+            <p class="footer-contact-info">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit
+                amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit
+                porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat aliquam.</p>
+        </div>
+        <div class="block6">
+            <div class="footer-phone phone">
+                <img src="../assets/images/footer/footer-icon-1.png" alt="Phone icon">
+                <p>Phone: (+63) 236 6322</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-3.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>Mon - Fri: 10am - 6pm</p>
+                    <p>Sat - Sun: 10am - 6pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="block7">
+            <div class="footer-phone">
+                <img src="../assets/images/footer/footer-icon-2.png" alt="Email icon">
+                <p>public@news.com</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-4.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>639 Jade Valley,</p>
+                    <p>Washington Dc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p class="copyright">© Copyright 2025 Mykhailo Lykhovyd</p>
+</footer>
+    <script src="../js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+$desktop-container-width: 1300px;
+$tablet-container-width: 960px;
+$tablet-vertical-container-width: 700px;
+
+$desktop-breakpoint: 1440px;
+$tablet-breakpoint: 1024px;
+$mobile-breakpoint: 768px;
+
+$tablet-max-width: $desktop-breakpoint - 1px;
+$tablet-vertical-max-width: $tablet-breakpoint - 1px;
+$mobile-max-width: $mobile-breakpoint - 1px;
+
+
+$primary-accent-color: #B92770;
+$body-text-gray-color: #504E4A;
+$primary-gray-decoration-color: #727174;
+$hero-background-color: #E7E8E9;
+$button-hover-color: #702963;
+$select-border-color: #E9E9ED;
+$quantity-buttons-color: #707070;
+

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitcase e-shop - Contact Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="contact">
+    <header>
+    <div class="container">
+        <div class="top-header-block">
+            <ul class="social-icons">
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/facebook.svg" alt="facebook icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/twitter.svg" alt="twitter icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/social-svg/instagram.svg" alt="instagram icon">
+                    </a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/logo.png" alt="Best Shop Logo">
+                    <svg class="inner_bag" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="32" height="32" fill="url(#pattern0_7064_3)" />
+                        <defs>
+                            <pattern id="pattern0_7064_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_7064_3" transform="scale(0.00666667)" />
+                            </pattern>
+                            <image id="image0_7064_3" width="150" height="150" preserveAspectRatio="none"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABmUExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5WfaagAAAAidFJOUwAQIECPz+//359gcK+/MFAcGFTjgKNuCERsZWQ51+5o89uQKq+OAAAACXBIWXMAABcRAAAXEQHKJvM/AAACH0lEQVR4Xu3b0VLaUACEYSFIBCtRFNFWrb7/S3ZMOtnkz9bBdnLsxf6XycH9BhjGm5ydpZRSSimllNJ/1GI5acEzhatW5+vadbGqeLZYiw01wzZf9J5VF5SMW2/5ihJdkjHtC1xL/6UatV7yVbP3jQbXFV81d1sKfKU/xpPerOJv1+KEb1Zb2V+JXb97vq0mNVf97R1fOWtVv2t/zRcf356tpt+1n5JYDW/NWlifKazPFNbvrpvtoJv22m546b1Vv3vJW+/pn54Nb3W/rzfDS801CNP2t/1fbOt+Du/GF/+lu/YP6ue47XYPBjqMj5di1fUGkFH3PF2MVd+DMug4/b+gGGt9BEY98GxBVv0AjHrk0ZKsR2CUWS/H6m64zHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwCizHhYwyqyHBYwy62EBo8x6WMAosx4WMMqshwWMMuthAaPMeljAKLMeFjDKrIcFjDLrYQGjzHpYwKjvPFqS9QMY9cSjJVlPwAx65tlyrGdQhu1feLoU6+XDpzF+vuJ4Idbrn79ZbcvD2+h8Edbb4YRnd0dPu3dPSJgH4P+27nGl4/RSSimllFJKKc3VLyXhNx4FpV0aAAAAAElFTkSuQmCC" />
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <ul class="user-links">
+                <li>
+                    <a href="#" id="user-account" rel="noopener noreferrer">
+                        <img src="../assets/images/user-icons/user.svg" alt="User Login">
+                    </a>
+                </li>
+                <li class="counter-container">
+                    <a href="cart.html">
+                        <img src="../assets/images/user-icons/shopping-cart.svg" alt="shopping cart">
+                    </a>
+                    <span class="cart-counter"></span>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog
+                        <img src="../assets/images/menu-arrow.svg" alt="Menu drop-down arrow"></a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="scroll-trigger"></div>
+<!-- Popup modal -->
+<div id="user-popup" class="popup-overlay">
+    <div class="popup-content">
+        <form class="login-form" id="login-form">
+            <label for="user-email" class="login-input-label">Email address <span class="required-star">*</span></label>
+            <input id="user-email" type="email" name="user-email" autocomplete="off">
+            <div class="password-wrap">
+                <label for="password" class="login-input-label">Password <span class="required-star">*</span></label>
+                <input id="password" type="password" name="password" required>
+                <span id="togglePassword" class="toggle-eye">
+                    <img src="../assets/images/header/password-hide-icon.svg" alt="password hide">
+                </span>
+            </div>
+            <div class="login-form-bottom">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="login-remember" name="login-remember">
+                    <span class="checkmark"></span>
+                    <span class="text">Remember me</span>
+                </label>
+                <p class="forgot-password"><a href="#">Forgot Your Password?</a></p>
+            </div>
+            <button class="btn btn--user-login">Log In</button>
+        </form>
+    </div>
+</div>
+    <main>
+        <section class="contact-breadcrumb">
+            <h1>Contact Us</h1>
+            <p>Duis vestibulum elit vel neque pharetra vulputate. Duis rutrum non risus in imperdiet.</p>
+        </section>
+        <section class="container">
+            <ul class="contact-options">
+                <li class="contact-options-item">
+                    <img src="../assets/images/contact/contact-option-1.png" alt="Our Location">
+                    <h3>Our Location</h3>
+                    <p>1234 NW Bobcat Lane, St. Robert, MO 65584-5678</p>
+                </li>
+                <li class="contact-options-item">
+                    <img src="../assets/images/contact/contact-option-2.png" alt="Operating Time">
+                    <h3>Operating Time</h3>
+                    <p>Monday - Friday: 9am - 6 pm Weekends: 10:30 am - 6pm</p>
+                </li>
+                <li class="contact-options-item">
+                    <img src="../assets/images/contact/contact-option-3.png" alt="Our Email">
+                    <h3>Our Email</h3>
+                    <p>best@shop.com info@bestshop.com</p>
+                </li>
+                <li class="contact-options-item">
+                    <img src="../assets/images/contact/contact-option-4.png" alt="Call Us">
+                    <h3>Call Us</h3>
+                    <p>(268)142-8413  <br/>  (760)265-2917</p>
+                </li>
+            </ul>
+        </section>
+        <section class="container feedback-block">
+            <div class="feedback-left">
+                <img src="../assets/images/contact/contact-feedback.jpg" alt="feedback">
+            </div>
+            <div class="feedback-right">
+                <h3>Your Feedback Is Much Appreciated!</h3>
+                <p>We will contact you when you complete the following form!</p>
+                <form id="contact-form" class="contact-form">
+                    <div class="contact-form-group">
+                        <label for="name">Your Name <span class="required-star">*</span></label>
+                        <input type="text" id="name" name="name" required autocomplete="off">
+                    </div>
+
+                    <div class="contact-form-group">
+                        <label for="email">Your Email Address <span class="required-star">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="off">
+                        <span id="email-error" class="error-msg"></span>
+                    </div>
+                   
+                    <div class="contact-form-group">
+                        <label for="topic">Topic <span class="required-star">*</span></label>
+                        <input type="text" id="topic" name="topic" required>
+                    </div>
+
+                    <div class="contact-form-group">
+                        <label for="message">Your Message <span class="required-star">*</span></label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--btn-contact">Send</button>
+                    <p class="form-message" id="form-message"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+    <section class="benefits">
+        <div class="container">
+            <h3 class="benefits-title">Our Benefits</h3>
+            <ul class="benefit-items">
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-1.png" alt="Our Benefit">
+                    <p class="benefit-text">Velit nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-2.png" alt="Our Benefit">
+                    <p class="benefit-text">Dolor eu varius. Morbi fermentum velit nisl.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-3.png" alt="Our Benefit">
+                    <p class="benefit-text">Malesuada fames ac ante ipsum primis in faucibus.</p>
+                </li>
+                <li class="benefit-item">
+                    <img src="../assets/images/footer/benefit-icon-4.png" alt="Our Benefit">
+                    <p class="benefit-text">Nisl sodales eget donec quis. volutpat orci.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="container grid-footer-container">
+        <div class="block1">
+            <h3><a href="about.html">About Us</a></h3>
+            <ul class="footer-links-list">
+                <li>Organisation</li>
+                <li>Partners</li>
+                <li>Clients</li>
+            </ul>
+        </div>
+        <div class="block2">
+            <h3>Interesting Links</h3>
+            <ul class="footer-links-list">
+                <li>Photo Gallery</li>
+                <li>Our Team</li>
+                <li>Socials</li>
+            </ul>
+        </div>
+        <div class="block3">
+            <h3>Achievements</h3>
+            <ul class="footer-links-list">
+                <li>Winning Awards</li>
+                <li>Press</li>
+                <li>Our Amazing Clients</li>
+            </ul>
+        </div>
+        <div class="block4">
+            <h3><a href="contact.html">Contact Us</a></h3>
+            <p class="footer-contact-info">Bendum dolor eu varius. Morbi fermentum velitsodales egetonec. volutpat orci.
+                Sed ipsum felis, tristique
+                egestas et, convallis ac velitn consequat nec luctus.</p>
+        </div>
+        <div class="block5">
+            <h3>Shipping Information</h3>
+            <p class="footer-contact-info">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit
+                amet erat nec nibh rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit
+                porta sapien, vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat aliquam.</p>
+        </div>
+        <div class="block6">
+            <div class="footer-phone phone">
+                <img src="../assets/images/footer/footer-icon-1.png" alt="Phone icon">
+                <p>Phone: (+63) 236 6322</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-3.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>Mon - Fri: 10am - 6pm</p>
+                    <p>Sat - Sun: 10am - 6pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="block7">
+            <div class="footer-phone">
+                <img src="../assets/images/footer/footer-icon-2.png" alt="Email icon">
+                <p>public@news.com</p>
+            </div>
+            <div class="footer-date-loc">
+                <img src="../assets/images/footer/footer-icon-4.png" alt="Phone icon">
+                <div class="footer-dates">
+                    <p>639 Jade Valley,</p>
+                    <p>Washington Dc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p class="copyright">© Copyright 2025 Mykhailo Lykhovyd</p>
+</footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
