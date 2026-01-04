@@ -131,7 +131,7 @@ let activeFilters = {
 
 async function loadProducts() {
   try {
-    const response = await fetch("../assets/data.json");
+    const response = await fetch("assets/data.json");
     if (!response.ok) throw new Error("Failed to load JSON");
 
     const { data } = await response.json();
@@ -213,7 +213,7 @@ function createProductItem(product) {
   li.innerHTML = `
       <div class="product-image">
           <a href="product-details.html?id=${product.id}">
-            <img src="../${product.imageUrl}" alt="${product.name}" />
+            <img src="${product.imageUrl}" alt="${product.name}" />
             <span class="sale-label">Sale</span>
           </a>
         </div>
@@ -254,7 +254,7 @@ async function runSearch() {
 
   console.log("Searching for:", query);
   try {
-    const response = await fetch("../assets/data.json");
+    const response = await fetch("assets/data.json");
     if (!response.ok) throw new Error("Failed to load JSON");
 
     const { data } = await response.json();
@@ -314,7 +314,7 @@ function renderSets(data) {
     const setHTML = `
       <li class="set-item">
         <img 
-          src="../assets/images/catalog/${color}-sets.png" 
+          src="assets/images/catalog/${color}-sets.png" 
           alt="${color} set"
           class="set-image"
         >
